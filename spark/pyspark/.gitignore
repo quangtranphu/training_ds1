@@ -1,0 +1,6 @@
+#Ignore csv files
+.csv
+data
+.env
+.png
+.html
