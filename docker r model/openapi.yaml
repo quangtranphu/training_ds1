@@ -1,0 +1,43 @@
+openapi: "3.0.3"
+servers:
+  description: Localhost
+  url: http://127.0.0.1:80
+
+paths:
+  /connection-status:
+    get:
+      summary: 'Checks that our API service is running'
+      responses:
+        default:
+          description: Default response.
+  /predict:
+    post:
+      summary: 'Predict iris species'
+      responses:
+        default:
+          description: Default response.
+      parameters: []
+      requestBody:
+        description: Iris dataset
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sepal.length:
+                  type: number
+                  title: Sepal length
+                  example: 5.0
+                sepal.width:
+                  type: number
+                  title: Sepal width
+                  example: 3.1
+                petal.length:
+                  type: number
+                  title: Petal length
+                  example: 2.2
+                petal.width:
+                  type: number
+                  title: Petal width
+                  example: 1.0
